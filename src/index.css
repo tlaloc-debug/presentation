@@ -1,13 +1,274 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.home {
+    position: absolute;
+    height: 1080px;
+    width: 100%;
+    background-image: url("./welder.jpg");   
+    transform: translate(0%);
+    transition: 1s;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.hometrans {
+    transform: translate(-100%);
+    transition: 1s;
+}
+
+.hometransmiddle {
+    transform: translate(-200%);
+    transition: 1s;
+}
+
+.projectsback {
+    position: absolute;
+    height: 1080px;
+    width: 100%;
+    margin-left: 100%;
+    background-image: url("./code.jpg");   
+    transform: translate(0%);
+    transition: 1s;
+}
+
+.projectstrans {
+    transform: translate(-100%);
+    transition: 1s;
+}
+
+.projectstransmiddle {
+    transform: translate(-200%);
+    transition: 1s;
+}
+
+.contactback {
+    position: absolute;
+    height: 1080px;
+    width: 100%;
+    margin-left: 200%;
+    background-image: url("./mail.jpg"); 
+    transform: translate(0%);
+    transition: 1s;  
+}
+
+.contacttrans {
+    transform: translate(-100%);
+    transition: 1s;
+}
+
+.contacttransmiddle {
+    transform: translate(-200%);
+    transition: 1s;
+}
+
+.homecell {
+    position: absolute;
+    height: 812px;
+    width: 100%;
+    background-image: url("./weldercell.jpg");   
+    transform: translate(0%);
+    transition: 1s;
+}
+
+.hometranscell {
+    transform: translate(-100%);
+    transition: 1s;
+}
+
+.hometransmiddlecell {
+    transform: translate(-200%);
+    transition: 1s;
+}
+
+.projectsbackcell {
+    position: absolute;
+    height: 812px;
+    width: 100%;
+    margin-left: 100%;
+    background-image: url("./codecell.jpg");   
+    transform: translate(0%);
+    transition: 1s;
+}
+
+.projectstranscell {
+    transform: translate(-100%);
+    transition: 1s;
+}
+
+.projectstransmiddlecell {
+    transform: translate(-200%);
+    transition: 1s;
+}
+
+.contactbackcell {
+    position: absolute;
+    height: 812px;
+    width: 100%;
+    margin-left: 200%;
+    background-image: url("./mailcell.jpg"); 
+    transform: translate(0%);
+    transition: 1s;  
+}
+
+.contacttranscell {
+    transform: translate(-100%);
+    transition: 1s;
+}
+
+.contacttransmiddlecell {
+    transform: translate(-200%);
+    transition: 1s;
+}
+
+.topnav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+}
+
+li {
+    display: inline-block;
+    text-decoration: none;
+    padding: 0px 10px;
+}
+
+.vertical {
+    display: flex;
+    align-items: center;
+}
+
+.titlepc {
+    color: white;
+    position: absolute;
+    margin-top: 300px;
+    margin-left: 100%;
+    width: 200px;
+    animation-name: titlepc;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards; 
+}
+
+@keyframes titlepc {
+    from {margin-left: 100%;}
+    to {margin-left: 60%;}
+  }
+
+.titlecell {
+    color: white;
+    position: absolute;
+    margin-top: 0px;
+    margin-left: 100%;
+    width: 200px;
+    animation-name: titlecell;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards; 
+}
+
+@keyframes titlecell {
+    from {margin-left: 100%;}
+    to {margin-left: 30%;}
+  }
+
+.projectspc {
+    color: white;
+    position: absolute;
+    margin-top: 400px;
+    margin-left: 100%;
+    width: 200px;
+    animation-name: projectspc;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards; 
+    animation-delay: 0.3s;
+}
+
+@keyframes projectspc {
+    from {margin-left: 100%;}
+    to {margin-left: 60%;}
+  }
+
+.projectscell {
+    color: white;
+    position: absolute;
+    margin-top: 50px;
+    margin-left: 100%;
+    width: 200px;
+    animation-name: projectscell;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards; 
+    animation-delay: 0.3s;
+}
+
+@keyframes projectscell {
+    from {margin-left: 100%;}
+    to {margin-left: 30%;}
+  }
+
+.contactpc {
+    color: white;
+    position: absolute;
+    margin-top: 450px;
+    margin-left: 100%;
+    width: 200px;
+    animation-name: contactpc;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards; 
+    animation-delay: 0.6s;
+}
+
+@keyframes contactpc {
+    from {margin-left: 100%;}
+    to {margin-left: 60%;}
+  }
+
+.contactcell {
+    color: white;
+    position: absolute;
+    margin-top: 80px;
+    margin-left: 100%;
+    width: 200px;
+    animation-name: contactcell;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards; 
+    animation-delay: 0.6s;
+}
+
+@keyframes contactcell {
+    from {margin-left: 100%;}
+    to {margin-left: 30%;}
+  }
+
+.socialpc {
+    color: white;
+    position: absolute;
+    margin-top: 550px;
+    margin-left: 100%;
+    width: 200px;
+    animation-name: socialpc;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards; 
+    animation-delay: 1s;
+}
+
+@keyframes socialpc {
+    from {margin-left: 100%;}
+    to {margin-left: 60%;}
+  }
+
+.socialcell {
+    color: white;
+    position: absolute;
+    margin-top: 750px;
+    margin-left: 100%;
+    width: 200px;
+    animation-name: socialcell;
+    animation-duration: 1s;  
+    animation-fill-mode: forwards; 
+    animation-delay: 1s;
+}
+
+@keyframes socialcell {
+    from {margin-left: 100%;}
+    to {margin-left: 30%;}
+  }
+
+.out {
+    display: none;
 }
