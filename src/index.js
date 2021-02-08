@@ -11,7 +11,6 @@ function App() {
     const [scroll, setscroll] = useState(false);
     const [projects, setprojects] = useState(false);
     const [contact, setcontact] = useState(false);
-    const [home, sethome] = useState(false);
 
     const matches = useMediaQuery({query: '(min-width:600px)'});
     console.log(matches);
@@ -83,17 +82,14 @@ function App() {
     const showprojects = () => {
         setcontact(false);
         setprojects(true);
-        sethome(false);
     }
     const showcontact = () => {
         setcontact(true);
         setprojects(false);
-        sethome(false);
     }
     const showhome = () => {
         setcontact(false);
         setprojects(false);
-        sethome(true);
     }
 
     return (

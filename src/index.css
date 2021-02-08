@@ -62,17 +62,17 @@
     height: 812px;
     width: 100%;
     background-image: url("./weldercell.jpg");   
-    transform: translate(0%);
+    transform: translate(0%, 0%);
     transition: 1s;
 }
 
 .hometranscell {
-    transform: translate(-100%);
+    transform: translate(0%, -100%);
     transition: 1s;
 }
 
 .hometransmiddlecell {
-    transform: translate(-200%);
+    transform: translate(0%, -200%);
     transition: 1s;
 }
 
@@ -80,19 +80,19 @@
     position: absolute;
     height: 812px;
     width: 100%;
-    margin-left: 100%;
+    margin-top: 812px;
     background-image: url("./codecell.jpg");   
-    transform: translate(0%);
+    transform: translate(0%, 0%);
     transition: 1s;
 }
 
 .projectstranscell {
-    transform: translate(-100%);
+    transform: translate(0%, -100%);
     transition: 1s;
 }
 
 .projectstransmiddlecell {
-    transform: translate(-200%);
+    transform: translate(0%, -200%);
     transition: 1s;
 }
 
@@ -100,19 +100,19 @@
     position: absolute;
     height: 812px;
     width: 100%;
-    margin-left: 200%;
+    margin-top: 1624px;
     background-image: url("./mailcell.jpg"); 
-    transform: translate(0%);
+    transform: translate(0%, 0%);
     transition: 1s;  
 }
 
 .contacttranscell {
-    transform: translate(-100%);
+    transform: translate(0%, -100%);
     transition: 1s;
 }
 
 .contacttransmiddlecell {
-    transform: translate(-200%);
+    transform: translate(0%, -200%);
     transition: 1s;
 }
 
