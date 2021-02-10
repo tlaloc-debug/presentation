@@ -3,7 +3,11 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import { Facebook } from 'react-bootstrap-icons';
 import { Github } from 'react-bootstrap-icons';
+import { Globe } from 'react-bootstrap-icons';
+import { TelephoneFill } from 'react-bootstrap-icons';
+import { EnvelopeFill } from 'react-bootstrap-icons';
 import { useMediaQuery } from 'react-responsive';
+import site from "./site.png"
 
 
 function App() {
@@ -13,7 +17,6 @@ function App() {
     const [contact, setcontact] = useState(false);
 
     const matches = useMediaQuery({query: '(min-width:600px)'});
-    console.log(matches);
 
     useEffect (()=>{
         document.addEventListener("scroll", e => {
@@ -95,31 +98,90 @@ function App() {
     return (
         <div > 
             <div className={matches ? homebackClasses : homebackClassescell}>
+                <div className={matches ? "aboutpc" : "aboutcell"}>
+                    <div className={matches ? "ispc" : "iscell"}><h3>Hi, I'm a Mechatronic Engineer and FrontEnd Web Develloper</h3></div>
+                    <h4>Skills:</h4>
+                    <div><i>React, Responsive Design, PHP, MySQL, Node JS, C++, Git</i></div>
+                    <h4>Academic:</h4>
+                    <div>
+                        <ul >
+                            <li><i>Mechatronics Eng., MEX</i></li>
+                            <li><i>DEP Soudage-Montage, CAN</i></li>
+                        </ul>
+                    </div>    
+                    <h4>Lenguajes:</h4>
+                    <div><i>English, French, Spanish</i></div>
+                </div>
             </div>
 
             <div className={matches ? projectsbackClasses : projectsbackClassescell}>
+                <div className={matches ? "workpc" : "workcell"}>
+                    <div className={matches ? "ispc" : "iscell"}>
+                        <div className={"horizontal"}><h2>Take a look at my projects</h2></div>
+                        <div className={"horizontal"}><div>This is the project I'm currently working on:</div>
+                        </div>
+                    </div>
+                    
+                    <div className={"horizontal"} style={{width: "100%"}}><img src={site} alt="" className={matches ? "pc" : "cell"}/></div>
+                    <div>
+                        <h4>This site contains:</h4>
+                        <div>Database query</div>
+                        <div><i>- Node JS, express, axios, MySQL</i></div><br/>
+                        <div>Basic ecommerce</div>
+                        <div><i>- Persistent Cart Shop</i></div><br/>
+                        <div>Basic Register / Log-in system</div>
+                        <div><i>- bcryptjs, persistent Log-in</i></div><br/>
+                    </div><br/>
+                    <div className={"horizontal"}><b>Built using React JS</b></div>
+                    <div className={"horizontal"}> 
+                        <div className={"vertical"} style={{padding: "20px 0px"}}>
+                            <div style={{padding: "0px 10px"}}><a href="https://www.youtube.com"><Globe size={30}/></a></div>
+                            <div style={{padding: "0px 10px"}}><a href="https://www.youtube.com"><Github size={30}/></a></div>
+                        </div>
+                    </div>
+                    
+                </div>
             </div>
 
             <div className={matches ? contactbackClasses : contactbackClassescell}>
+                <div className={matches ? "sendpc" : "sendcell"}>
+                    <div className={matches ? "ispc" : "iscell"}>
+                        <div className={"horizontal"}><h2>Let me know you like my work</h2></div>   
+                    </div>
+                    <div className={"horizontal"} style={{marginTop: "100px"}}>
+                        <div >
+                            <div>
+                                <TelephoneFill size={30}/>
+                                <div style={{display: "inline-block", marginLeft: "20px"}}><i>514-717-6664</i></div>
+                            </div><br/><br/>
+                            <div>
+                                <EnvelopeFill size={30}/>
+                                <div style={{display: "inline-block", marginLeft: "20px"}}><i>pelondinho@hotmail.com</i></div>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
             </div>
 
             <div className={matches ? "topnav" : "out"}>
                 <div className={"vertical"} onClick={showhome}>ERICK DIAZ</div>
                 <div>
                     <ul>
-                        <li onClick={showprojects}>PROJECTS</li>
-                        <li onClick={showcontact}>CONTACT</li>
+                        <li className={"top"} onClick={showprojects}>PROJECTS</li>
+                        <li className={"top"} onClick={showcontact}>CONTACT</li>
                     </ul>
                 </div>
                 <div className={"vertical"}>
-                    <Facebook size={30}/>
-                    <Github size={30}/>
+                    <div style={{padding: "0px 10px"}}><Facebook size={30}/></div>
+                    <div style={{padding: "0px 10px"}}><Github size={30}/></div>
                 </div>
 
             </div>
 
             <div className={titleClasses} onClick={showhome}>
-                <h3>ERICK DIAZ</h3>
+                <div>
+                    <h3>ERICK DIAZ</h3>
+                </div>    
             </div>
             <div className={projectsClasses} onClick={showprojects}>
                 PROJECTS
@@ -128,9 +190,8 @@ function App() {
                 CONTACT
             </div>
             <div className={socialClasses}>
-                <Facebook size={30}/>
-                <Github size={30}/>
-            
+                <div style={{padding: "0px 10px", display: "inline-block"}}><Facebook size={30}/></div>
+                <div style={{padding: "0px 10px", display: "inline-block"}}><Github size={30}/></div>
             </div>
         </div>
     )
