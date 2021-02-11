@@ -42,7 +42,7 @@
     height: 1080px;
     width: 100%;
     margin-left: 200%;
-    background-image: url("./mail.jpg"); 
+    background-image: url("./office.jpg"); 
     transform: translate(0%);
     transition: 1s;  
 }
@@ -101,7 +101,7 @@
     height: 812px;
     width: 100%;
     margin-top: 1624px;
-    background-image: url("./mailcell.jpg"); 
+    background-image: url("./officecell.jpg"); 
     transform: translate(0%, 0%);
     transition: 1s;  
 }
@@ -143,7 +143,7 @@ li.top:hover {
 .titlepc {
     color: white;
     position: absolute;
-    margin-top: 300px;
+    margin-top: 250px;
     margin-left: 100%;
     width: 200px;
     animation-name: titlepc;
@@ -177,7 +177,12 @@ li.top:hover {
     position: absolute;
     margin-top: 400px;
     margin-left: 100%;
-    width: 200px;
+    width: 150px;
+    border: solid;
+    border-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
     animation-name: projectspc;
     animation-duration: 1s;  
     animation-fill-mode: forwards; 
@@ -195,6 +200,9 @@ li.top:hover {
     margin-top: 50px;
     margin-left: 100%;
     width: 200px;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
     animation-name: projectscell;
     animation-duration: 1s;  
     animation-fill-mode: forwards; 
@@ -209,9 +217,14 @@ li.top:hover {
 .contactpc {
     color: white;
     position: absolute;
-    margin-top: 450px;
+    margin-top: 480px;
     margin-left: 100%;
-    width: 200px;
+    width: 150px;
+    border: solid;
+    border-color: white;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
     animation-name: contactpc;
     animation-duration: 1s;  
     animation-fill-mode: forwards; 
@@ -229,6 +242,9 @@ li.top:hover {
     margin-top: 80px;
     margin-left: 100%;
     width: 200px;
+    font-style: italic;
+    font-weight: bold;
+    text-decoration: underline;
     animation-name: contactcell;
     animation-duration: 1s;  
     animation-fill-mode: forwards; 
@@ -243,7 +259,7 @@ li.top:hover {
 .socialpc {
     color: white;
     position: absolute;
-    margin-top: 550px;
+    margin-top: 600px;
     margin-left: 100%;
     width: 200px;
     animation-name: socialpc;
@@ -260,9 +276,9 @@ li.top:hover {
 .socialcell {
     color: white;
     position: absolute;
-    margin-top: 750px;
+    margin-top: 30px;
     margin-left: 100%;
-    width: 200px;
+    width: 10px;
     animation-name: socialcell;
     animation-duration: 1s;  
     animation-fill-mode: forwards; 
@@ -271,7 +287,7 @@ li.top:hover {
 
 @keyframes socialcell {
     from {margin-left: 100%;}
-    to {margin-left: 30%;}
+    to {margin-left: 10%;}
   }
 
 .out {
@@ -336,7 +352,7 @@ img.cell {
 .sendpc {
     color: white;
     position: absolute;
-    top: 200px;
+    top: 300px;
     left: 100px; 
     
 }
@@ -344,7 +360,19 @@ img.cell {
 .sendcell {
     color: white;
     position: absolute;
-    top: 200px;
+    top: 300px;
     left: 20px; 
 }
 
+a.top {
+    color: black;
+}
+
+a.slide {
+    color: white;
+}
+
+.note {
+    display: block;
+    position: absolute;
+}

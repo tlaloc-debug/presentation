@@ -94,6 +94,12 @@ function App() {
         setcontact(false);
         setprojects(false);
     }
+    
+    const [showNote, setshowNote] = useState(false);
+
+    const selectnote = () => {
+        setshowNote(!showNote);
+    }
 
     return (
         <div > 
@@ -135,8 +141,10 @@ function App() {
                     <div className={"horizontal"}><b>Built using React JS</b></div>
                     <div className={"horizontal"}> 
                         <div className={"vertical"} style={{padding: "20px 0px"}}>
-                            <div style={{padding: "0px 10px"}}><a href="https://www.youtube.com"><Globe size={30}/></a></div>
-                            <div style={{padding: "0px 10px"}}><a href="https://www.youtube.com"><Github size={30}/></a></div>
+                            <div style={{padding: "0px 10px"}} onClick={selectnote}><Globe size={30}/>
+                                <div className={showNote ? "note" : "out"} >Not available. Need to change from MySQL to Postgresql to meet server requirements. </div>
+                            </div>
+                            <div style={{padding: "0px 10px"}}><a href="https://github.com/tlaloc-debug/portfolio2" className={"slide"}><Github size={30}/></a></div>
                         </div>
                     </div>
                     
@@ -172,15 +180,15 @@ function App() {
                     </ul>
                 </div>
                 <div className={"vertical"}>
-                    <div style={{padding: "0px 10px"}}><Facebook size={30}/></div>
-                    <div style={{padding: "0px 10px"}}><Github size={30}/></div>
+                    <div style={{padding: "0px 10px"}}><a href="https://www.facebook.com/people/Erick-Diaz/100046728112475" className={"top"}><Facebook size={30}/></a></div>
+                    <div style={{padding: "0px 10px"}}><a href="https://github.com/tlaloc-debug" className={"top"}><Github size={30}/></a></div>
                 </div>
 
             </div>
 
             <div className={titleClasses} onClick={showhome}>
                 <div>
-                    <h3>ERICK DIAZ</h3>
+                    <h2>ERICK DIAZ</h2>
                 </div>    
             </div>
             <div className={projectsClasses} onClick={showprojects}>
@@ -190,8 +198,8 @@ function App() {
                 CONTACT
             </div>
             <div className={socialClasses}>
-                <div style={{padding: "0px 10px", display: "inline-block"}}><Facebook size={30}/></div>
-                <div style={{padding: "0px 10px", display: "inline-block"}}><Github size={30}/></div>
+                <div style={{padding: "0px 10px", display: "inline-block"}}><a href="https://www.facebook.com/people/Erick-Diaz/100046728112475" className={"slide"}><Facebook size={30}/></a></div>
+                <div style={{padding: "0px 10px", display: "inline-block"}}><a href="https://github.com/tlaloc-debug" className={"slide"}><Github size={30}/></a></div>
             </div>
         </div>
     )
