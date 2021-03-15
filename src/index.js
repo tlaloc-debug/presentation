@@ -7,7 +7,10 @@ import { Globe } from 'react-bootstrap-icons';
 import { TelephoneFill } from 'react-bootstrap-icons';
 import { EnvelopeFill } from 'react-bootstrap-icons';
 import { useMediaQuery } from 'react-responsive';
-import site from "./site.png"
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
+import site1 from "./site1.png"
+import site2 from "./site2.png"
 
 
 function App() {
@@ -95,11 +98,6 @@ function App() {
         setprojects(false);
     }
     
-    const [showNote, setshowNote] = useState(false);
-
-    const selectnote = () => {
-        setshowNote(!showNote);
-    }
 
     return (
         <div > 
@@ -124,30 +122,57 @@ function App() {
                 <div className={matches ? "workpc" : "workcell"}>
                     <div className={matches ? "ispc" : "iscell"}>
                         <div className={"horizontal"}><h2>Take a look at my projects</h2></div>
-                        <div className={"horizontal"}><div>This is the project I'm currently working on:</div>
-                        </div>
+                        
                     </div>
                     
-                    <div className={"horizontal"} style={{width: "100%"}}><img src={site} alt="" className={matches ? "pc" : "cell"}/></div>
-                    <div>
-                        <h4>This site contains:</h4>
-                        <div>Database query</div>
-                        <div><i>- Node JS, express, axios, MySQL</i></div><br/>
-                        <div>Basic ecommerce</div>
-                        <div><i>- Persistent Cart Shop</i></div><br/>
-                        <div>Basic Register / Log-in system</div>
-                        <div><i>- bcryptjs, persistent Log-in</i></div><br/>
-                    </div><br/>
-                    <div className={"horizontal"}><b>Built using React JS</b></div>
-                    <div className={"horizontal"}> 
-                        <div className={"vertical"} style={{padding: "20px 0px"}}>
-                            <div style={{padding: "0px 10px"}} onClick={selectnote}><Globe size={30}/>
-                                <div className={showNote ? "note" : "out"} >Not available. Need to change from MySQL to Postgresql to meet server requirements. </div>
+                    <Tabs>
+                        <TabList>
+                            <Tab>Site 1</Tab>
+                            <Tab>Site 2</Tab>
+                        </TabList>
+
+                        <TabPanel>
+                            <div className={"horizontal"}><div>This is the project I'm currently working on:</div></div>
+                            <div className={"horizontal"} style={{width: "100%"}}><a href="https://choseyourpic.herokuapp.com/"><img src={site1} alt="" className={matches ? "pc" : "cell"}/></a></div>
+                            <div>
+                                <h4>This site contains:</h4>
+                                <div>Database query</div>
+                                <div><i>- Node JS, express, axios, MySQL</i></div><br/>
+                                <div>Basic ecommerce</div>
+                                <div><i>- Persistent Cart Shop</i></div><br/>
+                                <div>Basic Register / Log-in system</div>
+                                <div><i>- bcryptjs, persistent Log-in</i></div><br/>
+                            </div><br/>
+                            <div className={"horizontal"}><b>Built using React JS</b></div>
+                            <div className={"horizontal"}> 
+                                <div className={"vertical"} style={{padding: "20px 0px"}}>
+                                    <div style={{padding: "0px 10px"}}><a href="https://choseyourpic.herokuapp.com/" className={"slide"}><Globe size={30}/></a> </div>
+                                    <div style={{padding: "0px 10px"}}><a href="https://github.com/tlaloc-debug/choseyourpic" className={"slide"}><Github size={30}/></a></div>
+                                </div>
                             </div>
-                            <div style={{padding: "0px 10px"}}><a href="https://github.com/tlaloc-debug/portfolio2" className={"slide"}><Github size={30}/></a></div>
-                        </div>
-                    </div>
-                    
+                        </TabPanel>
+                        <TabPanel>
+                        <div className={"horizontal"}><div>This is the project I'm currently working on:</div></div>
+                            <div className={"horizontal"} style={{width: "100%"}}><a href="http://www.alineacionybalanceojulioregalado.com/"><img src={site2} alt="" className={matches ? "pc" : "cell"}/></a></div>
+                            <div>
+                                <h4>This site contains:</h4><br/>
+                                <div><i>Image Carousel</i></div><br/>
+                                <div><i>Interactive Map</i></div><br/>
+                                <div><i>Send Email System</i></div><br/><br/>
+                                
+                            </div><br/>
+                            <div className={"horizontal"}><b>Built using React JS</b></div>
+                            <div className={"horizontal"}> 
+                                <div className={"vertical"} style={{padding: "20px 0px"}}>
+                                <div style={{padding: "0px 10px"}}><a href="http://www.alineacionybalanceojulioregalado.com/" className={"slide"}><Globe size={30}/></a> </div>
+                                <div style={{padding: "0px 10px"}}><a href="https://github.com/tlaloc-debug/julio" className={"slide"}><Github size={30}/></a></div>
+                                </div>
+                            </div>
+                            <br/>
+                            <div>* Working on English version</div>
+                        </TabPanel>
+                    </Tabs>
+   
                 </div>
             </div>
 
